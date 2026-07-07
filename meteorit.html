@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meteorit — Terraria kompletní guide | StackMind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0d0f1a;
+      color: #e0e0e0;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .bg {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(234,179,8,0.08), transparent);
+      z-index: -1;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+    .back-link { color: #666; text-decoration: none; font-size: 0.9rem; display: inline-block; margin-bottom: 20px; }
+    .back-link:hover { color: #eab308; }
+    header {
+      text-align: center; padding: 60px 0 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 48px;
+    }
+    header h1 {
+      font-size: 2.5rem; font-weight: 800;
+      background: linear-gradient(135deg, #eab308, #ef4444);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 8px;
+    }
+    header p { color: #888; font-size: 1rem; }
+    .badge {
+      display: inline-block;
+      background: rgba(234,179,8,0.12); color: #eab308;
+      padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+      margin-top: 12px; border: 1px solid rgba(234,179,8,0.2);
+    }
+    section { margin-bottom: 40px; }
+    h2 {
+      font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    h2::before {
+      content: ''; display: inline-block; width: 4px; height: 20px;
+      background: #eab308; border-radius: 2px;
+    }
+    .card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px; padding: 24px; margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 1rem; font-weight: 600; color: #eab308; margin-bottom: 12px;
+    }
+    table {
+      width: 100%; border-collapse: separate; border-spacing: 0; margin: 12px 0;
+    }
+    th, td {
+      padding: 10px 14px; text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    th { color: #888; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    td { color: #ccc; }
+    tr:last-child td { border-bottom: none; }
+    .tag {
+      display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 600;
+    }
+    .tag-yellow  { background: rgba(234,179,8,0.12);  color: #eab308; border: 1px solid rgba(234,179,8,0.15); }
+    .tag-red     { background: rgba(239,68,68,0.12);   color: #ef4444; border: 1px solid rgba(239,68,68,0.15); }
+    .tag-orange  { background: rgba(245,158,11,0.12);  color: #f59e0b; border: 1px solid rgba(245,158,11,0.15); }
+    .tag-purple  { background: rgba(168,85,247,0.12);  color: #a855f7; border: 1px solid rgba(168,85,247,0.15); }
+    .tag-gray    { background: rgba(255,255,255,0.05); color: #888;    border: 1px solid rgba(255,255,255,0.08); }
+    .tag-green   { background: rgba(34,197,94,0.12);   color: #22c55e; border: 1px solid rgba(34,197,94,0.15); }
+    .tag-blue    { background: rgba(59,130,246,0.12);   color: #3b82f6; border: 1px solid rgba(59,130,246,0.15); }
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 8px; color: #bbb; }
+    ul li strong { color: #e0e0e0; }
+    .highlight {
+      background: rgba(234,179,8,0.06);
+      border: 1px solid rgba(234,179,8,0.12);
+      border-radius: 12px; padding: 16px 20px; margin: 16px 0;
+    }
+    .highlight p { color: #eab308; font-size: 0.9rem; }
+    hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 40px 0; }
+    footer {
+      text-align: center; padding: 40px 0; color: #444; font-size: 0.8rem;
+    }
+    .grid-2 {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="container">
+
+<a href="./" class="back-link">← StackMind Universe</a>
+
+<header>
+  <h1>☄️ Meteorit</h1>
+  <p>Kdy padá, kolik rudy, co postavit — kompletní guide</p>
+  <div class="badge">Terraria · Pre-Hardmode · Event</div>
+</header>
+
+<!-- Kdy padá -->
+<section>
+  <h2>Kdy a jak meteorit padá</h2>
+  <div class="card">
+    <h3>Podmínky pro pád</h3>
+    <ul>
+      <li><strong>Rozbij Shadow Orb nebo Crimson Heart</strong> — po každejch 2 rozbitejch orbech je 50% šance, že do 1 herní noci spadne meteorit</li>
+      <li><strong>Poprvé</strong> — první meteorit může spadnout až po rozbití alespoň 1 orb/heart</li>
+      <li><strong>Opakovaný pády</strong> — každej další meteorit po 2 rozbitejch orbech</li>
+      <li><strong>Limit</strong> — obvykle 3-6 meteoritů na svět (záleží na velikosti světa)</li>
+      <li>Nespadne: pokud už je na světě 3-6 meteoritů, dál už ne</li>
+    </ul>
+    <div class="highlight">
+      <p>☝️ <strong>Jednička:</strong> Vždycky rozbij Shadow Orb/Crimson Heart brzo ráno. Meteorit padne až v noci. Když rozbiješ orb v noci, meteory se nerenderujou — najdeš ho až za svítání.</p>
+    </div>
+    <br>
+    <h3>Kde přistane</h3>
+    <ul>
+      <li>Náhodné místo na povrchu</li>
+      <li>Nespadne: do vody, do dungeonu, na oceán</li>
+      <li>Může spadnout: do džungle, do corruptionu, do kaktusů — prostě kdekoliv jinde</li>
+      <li><strong>Občas přistane na stromech/domě</strong> — pak je v prdeli, rozbije ti to střechu</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Jak těžit -->
+<section>
+  <h2>Jak těžit</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Krumpáč:</strong> potřebuješ minimálně <strong>Gold Pickaxe</strong> nebo <strong>Platinum Pickaxe</strong></li>
+      <li>Slabší krumpáč (Iron/Lead/Silver/Tungsten) meteorit nerozbije — odskakuje to</li>
+      <li><strong>Bomby / Dynamit</strong> — fungujou taky</li>
+      <li><strong>Pozor na oheň</strong> — Meteorite je horkej, stojíš na něm = dostáváš damage (Meteor armor tohle ignoruje)</li>
+      <li>Doporučuju si pod sebe postavit plošiny nebo lít vodu</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Množství -->
+<section>
+  <h2>Kolik rudy</h2>
+  <div class="card">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="flex:1;min-width:100px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;color:#eab308;">50-90</div>
+        <div style="font-size:0.8rem;color:#888;margin-top:4px;">Rudy na 1 kráter</div>
+      </div>
+      <div style="flex:1;min-width:100px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;color:#eab308;">3-6</div>
+        <div style="font-size:0.8rem;color:#888;margin-top:4px;">Kráterů na svět</div>
+      </div>
+      <div style="flex:1;min-width:100px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;color:#eab308;">~300-400</div>
+        <div style="font-size:0.8rem;color:#888;margin-top:4px;">Celkem rudy na svět</div>
+      </div>
+    </div>
+    <p style="color:#888;font-size:0.9rem;">Malá mapa: ~3 krátery · Střední: ~4 · Velká: ~6</p>
+  </div>
+</section>
+
+<!-- Crafting -->
+<section>
+  <h2>Co z toho postavit</h2>
+
+  <div class="card">
+    <h3>🏆 Meteor Armor — top před EoW</h3>
+    <table>
+      <tr><th>Kus</th><th>Meteorite Barů</th></tr>
+      <tr><td>Meteor Helmet</td><td>10</td></tr>
+      <tr><td>Meteor Breastplate</td><td>20</td></tr>
+      <tr><td>Meteor Leggings</td><td>15</td></tr>
+      <tr style="border-top:1px solid rgba(255,255,255,0.1);"><td><strong>Celkem set</strong></td><td><strong>45 barů</strong></td></tr>
+    </table>
+    <div class="highlight">
+      <p>⚡ <strong>Set bonus:</strong> Space Gun stojí 0 many!</p>
+    </div>
+    <p style="color:#aaa;font-size:0.85rem;margin-top:8px;">To znamená nekonečný střílení bez many, bez přestávky. Eater of Worlds v křiku.</p>
+  </div>
+
+  <div class="card">
+    <h3>🔫 Zbraně</h3>
+    <table>
+      <tr><th>Zbraň</th><th>Barů</th><th>DMG</th><th>Proč</th></tr>
+      <tr><td><strong>Space Gun</strong></td><td>30</td><td>17</td><td>S Meteor setem zdarma, piercing, rychlý</td></tr>
+      <tr><td><strong>Meteor Staff</strong></td><td>20</td><td>27</td><td>Volá meteory — AOE, ale až hardmode (HM)</td></tr>
+      <tr><td><strong>Star Cannon</strong></td><td>1 (+ 5 Fallen Stars)</td><td>55</td><td>Největší pre-HM dmg, ale Fallen Stars jsou munice</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Ostatní</h3>
+    <table>
+      <tr><th>Item</th><th>Barů</th><th>K čemu</th></tr>
+      <tr><td>Meteor Hamaxe</td><td>15</td><td>Kombinovaná sekera + krumpáč</td></tr>
+      <tr><td>Phaseblade</td><td>20</td><td>Sword — později upgradneš na Muramasu → Nights Edge</td></tr>
+      <tr><td>Molten armor</td><td>🟢 ne z meteori</td><td>To je až z Hellstone</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- Bar conversion -->
+<section>
+  <h2>Přepočet</h2>
+  <div class="card">
+    <table>
+      <tr><th>Položka</th><th>Ore</th><th>Barů</th></tr>
+      <tr><td><strong>1 Meteorite Bar</strong></td><td>3 Ore</td><td>1</td></tr>
+      <tr><td><strong>Celý set + Space Gun</strong></td><td>225 Ore (75 barů)</td><td>45 + 30 = 75</td></tr>
+      <tr><td><strong>Jen set</strong></td><td>135 Ore</td><td>45</td></tr>
+      <tr><td><strong>Set + Space Gun + Phaseblade</strong></td><td>285 Ore</td><td>95</td></tr>
+    </table>
+    <br>
+    <p style="color:#888;font-size:0.85rem;">Vychází to dobře — 1 kráter (~70 ore) stačí na set. Druhej kráter na Space Gun a zbytek. Reálně potřebuješ 2-3 krátery na všechno.</p>
+  </div>
+</section>
+
+<!-- Strat -->
+<section>
+  <h2>Tipy</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Space Gun + Meteor set</strong> = absolutní ez mode na Eater of Worlds a King Slime</li>
+      <li>Nemusíš řešit manu — prostě držíš tlačítko a střílíš</li>
+      <li>Meteorit umí přistát na tvým domě — pokud ho najdeš hned po pádu, můžeš ho rychle vytěžit dřív, než tě ostatní zabijou</li>
+      <li>Na těžení vem <strong>Obsidian Skin Potion</strong> kdyby náhodou — oheň z meteori není lava, ale pálí</li>
+      <li><strong>1 kráter ≈ 70 ore ≈ 23 barů</strong></li>
+      <li><strong>2 krátery</strong> = máš set + Space Gun + Phaseblade</li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+<footer>StackMind · Terraria Meteorite Guide · 2026</footer>
+
+</div>
+</body>
+</html>

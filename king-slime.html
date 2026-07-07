@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Slime Guide — Terraria</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0d0f1a;
+      color: #e0e0e0;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .bg {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(59,130,246,0.12), transparent),
+                  radial-gradient(ellipse 60% 50% at 80% 80%, rgba(34,197,94,0.08), transparent);
+      z-index: -1;
+    }
+    .container { max-width: 820px; margin: 0 auto; padding: 40px 24px; }
+    header {
+      text-align: center;
+      padding: 60px 0 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 48px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6, #22c55e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    header p { color: #888; font-size: 1.1rem; }
+    .badge {
+      display: inline-block;
+      background: rgba(59,130,246,0.15);
+      color: #3b82f6;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 12px;
+      border: 1px solid rgba(59,130,246,0.2);
+    }
+    .back-link {
+      display: inline-block;
+      color: #666;
+      text-decoration: none;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { color: #3b82f6; }
+    section { margin-bottom: 48px; }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: #3b82f6;
+      border-radius: 2px;
+    }
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(8px);
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #60a5fa;
+      margin-bottom: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 16px 0;
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    th {
+      color: #888;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    td { color: #ccc; }
+    tr:last-child td { border-bottom: none; }
+    .tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .tag-blue   { background: rgba(59,130,246,0.15);  color: #3b82f6; }
+    .tag-green  { background: rgba(34,197,94,0.15);   color: #22c55e; }
+    .tag-purple { background: rgba(168,85,247,0.15);  color: #a855f7; }
+    .tag-yellow { background: rgba(234,179,8,0.15);   color: #eab308; }
+    .tag-red    { background: rgba(239,68,68,0.15);   color: #ef4444; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 640px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      header h1 { font-size: 2rem; }
+    }
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 8px; color: #bbb; }
+    ul li strong { color: #e0e0e0; }
+    hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 40px 0; }
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #555;
+      font-size: 0.85rem;
+    }
+    .stats {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .stat {
+      flex: 1;
+      min-width: 120px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat .num { font-size: 1.8rem; font-weight: 800; color: #fff; }
+    .stat .label { font-size: 0.8rem; color: #888; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="container">
+
+<a href="./" class="back-link">← All Guides</a>
+
+<header>
+  <h1>💧 King Slime</h1>
+  <p>How to summon, gear up, fight & loot</p>
+  <div class="badge">Terraria · Pre-Hardmode · Forest</div>
+</header>
+
+<!-- Stats -->
+<section>
+  <div class="stats">
+    <div class="stat"><div class="num">2000 HP</div><div class="label">Normal</div></div>
+    <div class="stat"><div class="num">14</div><div class="label">Defense</div></div>
+    <div class="stat"><div class="num">40</div><div class="label">Damage</div></div>
+    <div class="stat"><div class="num">3.5%</div><div class="label">Expert drop</div></div>
+  </div>
+</section>
+
+<!-- How to Summon -->
+<section>
+  <h2>How to Summon</h2>
+  <div class="card">
+    <h3>Method 1 — Slime Crown (crafted)</h3>
+    <ul>
+      <li><strong>Recipe:</strong> Gold/Platinum Crown + Gel ×20 at a Demon Altar</li>
+      <li><strong>Gold/Platinum Crown:</strong> 5 Gold/Platinum Bars + Ruby at a Work Bench</li>
+      <li>Může být použit kdykoliv, kdekoliv (pouze v lese / na povrchu)</li>
+    </ul>
+    <br>
+    <h3>Method 2 — Slime Rain (random event)</h3>
+    <ul>
+      <li>Náhodný event na povrchu. Zabij 75 slime (150 pokud už jsi zabil KS)</li>
+      <li>King Slime se objeví automaticky</li>
+    </ul>
+    <br>
+    <h3>Method 3 — Natural spawn</h3>
+    <ul>
+      <li>Extrémně vzácný — spawnuje se náhodně v krajních dvou třetinách mapy na povrchu</li>
+      <li>Šance je nízká — craftni radši Crown</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Gear -->
+<section>
+  <h2>Gear</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Armor</h3>
+      <ul>
+        <li><span class="tag tag-blue">Platinum</span> — co máš, stačí</li>
+        <li><span class="tag tag-purple">Gold</span> — taky v pohodě</li>
+        <li><span class="tag tag-green">Wood</span> — no, dá se, ale proč?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Weapons (doporučené)</h3>
+      <ul>
+        <li><span class="tag tag-blue">Musket</span> — 36 dmg, střílej z dálky</li>
+        <li><span class="tag tag-yellow">Bow + Flaming Arrows</span> — levný, slušný</li>
+        <li><span class="tag tag-purple">Enchanted Boomerang</span> — švihá a vrací se</li>
+        <li><span class="tag tag-green">Thorn Chakram</span> — z Jungle, lepší boomerang</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Strategy -->
+<section>
+  <h2>Strategy</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Platformy</strong> — 1-2 řady nad zemí, King Slime skáče vysoko</li>
+      <li><strong>Kiteuj</strong> — utíkej, střílej, nenech se přiskřípnout</li>
+      <li><strong>Pozor na spawn</strong> — King Slime spawnuje modrý slime, který tě můžou blokovat</li>
+      <li><strong>Zbraně s knockbackem</strong> — udržíš ho dál od sebe</li>
+      <li><strong>Grenades</strong> — fungujou i na něj (60 dmg)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Drops -->
+<section>
+  <h2>Drops</h2>
+  <div class="card">
+    <table>
+      <tr><th>Item</th><th>Chance</th><th>Note</th></tr>
+      <tr><td><strong>Ninja Hood</strong></td><td>33% (N)/100% (E)</td><td>Část Ninja setu</td></tr>
+      <tr><td><strong>Ninja Shirt</strong></td><td>33% (N)/100% (E)</td><td>Část Ninja setu</td></tr>
+      <tr><td><strong>Ninja Pants</strong></td><td>33% (N)/100% (E)</td><td>Část Ninja setu</td></tr>
+      <tr><td><strong>Slime Hook</strong></td><td>33%</td><td>Hák s krátkým dosahem</td></tr>
+      <tr><td><strong>Slime Gun</strong></td><td>~17%</td><td>Vodní pistole, co střílí slime</td></tr>
+      <tr><td><strong>Royal Gel</strong></td><td>~5%</td><td>Slime tě neútočí</td></tr>
+      <tr><td><strong>Solidifier</strong></td><td>~3%</td><td>Gel → Slime Block</td></tr>
+      <tr><td><strong>King Slime Trophy</strong></td><td>10%</td><td>Dekorace</td></tr>
+      <tr><td><strong>Gold Coins</strong></td><td>8 GC</td><td>Vždy</td></tr>
+    </table>
+    <br>
+    <p style="color:#888; font-size:0.85rem;">Expert mode: <strong>Royal Gel</strong> (pet) — ochrana proti slime damage + <strong>Slime Saddle</strong> (mount)</p>
+  </div>
+</section>
+
+<hr>
+<footer>Made for Terraria · King Slime Guide · 💧</footer>
+
+</div>
+</body>
+</html>
